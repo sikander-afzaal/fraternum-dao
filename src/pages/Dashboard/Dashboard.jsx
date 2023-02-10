@@ -60,7 +60,7 @@ const Dashboard = () => {
           <h2 className="text-white font-alumni font-normal text-[40px] leading-[1] ">
             Latest Proposals
           </h2>
-          <div className=" flex flex-col justify-start items-start w-full gap-5 pr-4 greenScroll max-h-[800px] overflow-y-auto">
+          <div className=" flex flex-col justify-start items-start w-full gap-5 pr-4 greenScroll max-h-[660px] overflow-y-auto">
             <ProposalBox />
             <ProposalBox />
             <ProposalBox />
