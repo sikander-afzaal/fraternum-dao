@@ -41,7 +41,7 @@ body {
       rgba(0, 0, 0, 0.1) 51.04%,
       rgba(0, 0, 0, 1) 88.02%
     ),
-    url("/public/bg.png"),
+    url("/bg.png"),
     linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(177, 177, 177, 0.1) 100%);
   background-size: cover;
   background-repeat: no-repeat;
