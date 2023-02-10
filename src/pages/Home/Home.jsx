@@ -124,9 +124,9 @@ const Home = () => {
             <div className="flex justify-center border border-solid border-[#ffdddd] rounded-[18px] min-w-[240px] sm:w-auto w-full h-[69px] items-center gap-3">
               <p className="text-white opacity-70 text-[35px] font-abel leading-[1] font-normal relative">
                 $ 4,560,000
-                <p className="absolute bottom-full right-0 text-[#50E3C2] text-[11px] font-abel">
+                <span className="absolute bottom-full right-0 text-[#50E3C2] text-[11px] font-abel">
                   +39.69%
-                </p>
+                </span>
               </p>
             </div>
           </div>

@@ -5,6 +5,7 @@ import Topbar from "./layout/Topbar";
 import { useEffect, useState } from "react";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Chamber from "./pages/Chambers/Chamber";
+import Treasury from "./pages/Treasury/Treasury";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/chambers" element={<Chamber />} />
+          <Route path="/treasury" element={<Treasury />} />
         </Routes>
       </div>
     </div>

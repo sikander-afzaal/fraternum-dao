@@ -3,6 +3,9 @@ import ChamberProposal from "../../components/ChamberProposal";
 const Chamber = () => {
   return (
     <div className="flex max-w-[1300px] justify-start items-center flex-col w-full px-5 ">
+      <h2 className="font-pirate uppercase text-[40px] font-normal mt-5 md:self-start text-white">
+        Chambers
+      </h2>
       <div className="grid mt-8 grid-cols-1 lg:grid-cols-[1fr__350px] xl:grid-cols-[1fr__430px] items-start w-full gap-10">
         <div className="w-full relative flex justify-start items-center md:items-start flex-col gap-3 ">
           <h2 className="text-white font-alumni font-normal text-[40px] leading-[1] ">
@@ -56,9 +59,9 @@ const Chamber = () => {
           <div className="flex justify-center border border-solid border-[#ffdddd] rounded-[18px] min-w-[240px] sm:w-auto w-full h-[69px] items-center gap-3">
             <p className="text-white opacity-70 text-[35px] font-abel leading-[1] font-normal relative">
               $ 4,560,000
-              <p className="absolute bottom-full right-0 text-[#50E3C2] text-[11px] font-abel">
+              <span className="absolute bottom-full right-0 text-[#50E3C2] text-[11px] font-abel">
                 +39.69%
-              </p>
+              </span>
             </p>
           </div>
         </div>
