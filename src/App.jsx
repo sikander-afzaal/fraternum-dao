@@ -10,7 +10,7 @@ const App = () => {
     <div className="app min-h-screen grid w-full grid-cols-2 grid-rows-[auto__1fr__1fr] md:grid-cols-[280px__1fr__1fr]">
       <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
       <Topbar setSidebar={setSidebar} />
-      <div className="main-grid w-full">
+      <div className="main-grid w-full pb-5">
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
