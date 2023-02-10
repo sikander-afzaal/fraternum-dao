@@ -10,7 +10,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
         ></div>
       )}
       <div
-        className={`sidebar flex px-6 justify-start items-center flex-col py-7  top-0 overflow-y-auto max-h-full gap-10 h-full transition-all md:max-w-none max-w-[400px] duration-1000 z-[90]  bg-sidebarBg w-full md:sticky fixed ${
+        className={`sidebar flex px-6 justify-start items-center flex-col py-7  top-0 h-full md:h-auto md:max-h-screen overflow-y-auto  gap-10  transition-all md:max-w-none max-w-[400px] duration-1000 z-[90]  bg-sidebarBg w-full md:sticky fixed ${
           sidebar ? "left-0" : "-left-[900px]"
         }`}
       >
@@ -31,10 +31,11 @@ const Sidebar = ({ sidebar, setSidebar }) => {
         </svg>
 
         <div className="flex justify-start items-center flex-col gap-4">
-          <Link to={"/"}>
+          <Link onClick={() => setSidebar(false)} to={"/"}>
             <img src="/logo.png" className="max-w-full object-contain" alt="" />
           </Link>
           <Link
+            onClick={() => setSidebar(false)}
             to={"/"}
             className="textbase grid place-items-center uppercase text-white font-normal bg-darkGreen rounded-[10px] w-[153px] h-[32px]"
           >
@@ -43,6 +44,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
         </div>
         <div className="flex justify-start items-center flex-col w-full gap-8">
           <NavLink
+            onClick={() => setSidebar(false)}
             to={"/dashboard"}
             className="w-full flex   justify-center items-center gap-5"
           >
@@ -73,6 +75,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             )}
           </NavLink>
           <NavLink
+            onClick={() => setSidebar(false)}
             to={"/chambers"}
             className="w-full flex   justify-center items-center gap-5"
           >
@@ -103,6 +106,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             )}
           </NavLink>
           <NavLink
+            onClick={() => setSidebar(false)}
             to={"/sanctum"}
             className="w-full flex   justify-center items-center gap-5"
           >
@@ -133,6 +137,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             )}
           </NavLink>
           <NavLink
+            onClick={() => setSidebar(false)}
             to={"/treasury"}
             className="w-full flex   justify-center items-center gap-5"
           >
@@ -163,6 +168,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             )}
           </NavLink>
           <NavLink
+            onClick={() => setSidebar(false)}
             to={"/ino"}
             className="w-full flex   justify-center items-center gap-5"
           >

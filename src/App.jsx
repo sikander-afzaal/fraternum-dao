@@ -1,18 +1,25 @@
 import Sidebar from "./layout/Sidebar";
 import Home from "./pages/Home/Home";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Topbar from "./layout/Topbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 const App = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   const [sidebar, setSidebar] = useState(false);
   return (
     <div className="app min-h-screen grid w-full grid-cols-2 grid-rows-[auto__1fr__1fr] md:grid-cols-[280px__1fr__1fr]">
       <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
       <Topbar setSidebar={setSidebar} />
-      <div className="main-grid w-full pb-5">
+      <div className="main-grid w-full pb-5 flex justify-start flex-col items-center">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </div>
