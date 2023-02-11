@@ -9,7 +9,9 @@ import Treasury from "./pages/Treasury/Treasury";
 import Sanctum from "./pages/Sanctum/Sanctum";
 import ProposalDetails from "./pages/Chambers/ProposalDetails";
 import Ino from "./pages/Ino/Ino";
-import MemberProposalModal from "./components/MemberProposalModal";
+import RequestTokenModal from "./components/RequestTokenModal";
+import RequestSharesModal from "./components/RequestSharesModal";
+import WhitelistTokenModal from "./components/WhitelistTokenModal";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -20,7 +22,9 @@ const App = () => {
   const [sidebar, setSidebar] = useState(false);
   return (
     <div className="app min-h-screen grid w-full grid-cols-2  grid-rows-[auto__1fr__1fr] md:grid-cols-[280px__1fr__1fr]">
-      {/* <MemberProposalModal /> */}
+      {/* <RequestTokenModal /> */}
+      {/* <RequestSharesModal /> */}
+      <WhitelistTokenModal />
       <div className="fixed top-0 -z-10 left-0 h-full w-full pointer-events-none bg-bodyBg bg-center"></div>
       <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
       <Topbar setSidebar={setSidebar} />

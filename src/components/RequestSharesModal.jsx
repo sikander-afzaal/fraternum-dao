@@ -1,11 +1,11 @@
 import { useState } from "react";
 import InputBox from "./InputBox";
 
-const MemberProposalModal = () => {
+const RequestSharesModal = () => {
   const [formData, setFormData] = useState({
     title: "",
     shares: "",
-    tribute: "",
+    link: "",
     desc: "",
   });
   const inputHandler = (e) => {
@@ -18,15 +18,30 @@ const MemberProposalModal = () => {
     <>
       <div className="overlay z-[91]"></div>
       <div className="fixed top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 max-h-[90%] overflow-y-auto flex justify-start items-start flex-col w-[90%] max-w-[600px] gap-5 bg-gray p-5 z-[92] rounded-[10px]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="white"
+          className="w-6 h-6 absolute top-3 right-3 cursor-pointer"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+
         <div className="flex justify-start items-center text-center sm:text-left sm:items-start flex-col gap-2">
-          <h3 className="font-pirate text-white text-[22px] leading-[1] ">
+          <h3 className="font-pirate uppercase text-white text-[22px] leading-[1] ">
             Member Proposal
           </h3>
           <p className="text-mint font-alumni text-[30px] leading-[1]">
-            Request Shares For Tokens
+            Request Shares For Work Completed
           </p>
           <p className="text-abel text-base sm:text-xl text-white">
-            Request shares from the DAO in exchange for ERC-20 tokens
+            Request shares from the DAO by showing finished work{" "}
           </p>
         </div>
         <form className="flex justify-start items-start flex-col gap-5 w-full">
@@ -49,21 +64,21 @@ const MemberProposalModal = () => {
               htmlFor={"tribute"}
               className="text-white uppercase text-2xl font-alumni leading-[1]"
             >
-              * Tribute Offered
+              * Link
             </label>
             <div className="flex justify-start items-center rounded-[10px] overflow-hidden w-full border border-white border-solid h-[45px]">
+              <div className="min-w-[100px] outline-none border-r border-r-white border-solid flex justify-center items-center bg-darkGreen text-white h-full">
+                <p className="text-white text-lg leading-[1]">https://</p>
+              </div>
               <input
                 type="text"
-                placeholder="0"
-                value={formData.tribute}
-                name={"tribute"}
-                id="tribute"
+                placeholder="daolink.club"
+                value={formData.link}
+                name={"link"}
+                id="link"
                 onChange={inputHandler}
                 className="w-full bg-transparent border-none outline-none h-full text-white pl-3 "
               />
-              <select className="min-w-[100px] outline-none border-l border-l-white border-solid px-3 bg-darkGreen text-white h-full">
-                <option value="karma">KARMA</option>
-              </select>
             </div>
           </div>
           <div className="flex justify-start w-full items-start flex-col gap-3">
@@ -101,4 +116,4 @@ const MemberProposalModal = () => {
   );
 };
 
-export default MemberProposalModal;
+export default RequestSharesModal;
