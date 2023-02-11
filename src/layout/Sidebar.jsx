@@ -10,7 +10,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
         ></div>
       )}
       <div
-        className={`sidebar flex px-6 justify-start items-center flex-col py-7  top-0 h-full md:h-auto md:max-h-screen overflow-y-auto  gap-10  transition-all md:max-w-none max-w-[400px] duration-1000 z-[90]  bg-sidebarBg w-full md:sticky fixed ${
+        className={`sidebar flex px-6 justify-start items-center flex-col py-7  top-0 h-full md:h-auto md:max-h-screen overflow-y-auto  gap-10  transition-all md:max-w-none max-w-[350px] duration-1000 z-[90]  bg-sidebarBg w-full md:sticky fixed ${
           sidebar ? "left-0" : "-left-[900px]"
         }`}
       >
@@ -34,19 +34,12 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           <Link onClick={() => setSidebar(false)} to={"/"}>
             <img src="/logo.png" className="max-w-full object-contain" alt="" />
           </Link>
-          <Link
-            onClick={() => setSidebar(false)}
-            to={"/"}
-            className="textbase grid place-items-center uppercase text-white font-normal bg-darkGreen rounded-[10px] w-[153px] h-[32px]"
-          >
-            Home
-          </Link>
         </div>
-        <div className="flex justify-start items-center flex-col w-full gap-8">
+        <div className="flex justify-start items-center flex-col w-full gap-5 md:gap-8">
           <NavLink
             onClick={() => setSidebar(false)}
-            to={"/dashboard"}
-            className="w-full flex   justify-center items-center gap-5"
+            to={"/"}
+            className="w-full flex  justify-start md:justify-center items-center gap-5"
           >
             {({ isActive }) => (
               <>
@@ -56,7 +49,39 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke={isActive ? "#53EA62" : "white"}
-                  className="w-6 h-6"
+                  className="min-w-6 min-h-6 h-7 w-7 md:h-6 md:w-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  />
+                </svg>
+
+                <button
+                  className={`textbase uppercase text-white font-normal ${
+                    isActive ? "bg-darkGreen" : "bg-gray"
+                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
+                >
+                  Home
+                </button>
+              </>
+            )}
+          </NavLink>
+          <NavLink
+            onClick={() => setSidebar(false)}
+            to={"/dashboard"}
+            className="w-full flex  justify-start md:justify-center items-center gap-5"
+          >
+            {({ isActive }) => (
+              <>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke={isActive ? "#53EA62" : "white"}
+                  className="min-w-6 min-h-6 h-7 w-7 md:h-6 md:w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -67,7 +92,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                 <button
                   className={`textbase uppercase text-white font-normal ${
                     isActive ? "bg-darkGreen" : "bg-gray"
-                  } rounded-[10px] w-[153px] h-[32px]`}
+                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
                 >
                   DASHBOARD
                 </button>
@@ -77,7 +102,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           <NavLink
             onClick={() => setSidebar(false)}
             to={"/chambers"}
-            className="w-full flex   justify-center items-center gap-5"
+            className="w-full flex  justify-start md:justify-center items-center gap-5"
           >
             {({ isActive }) => (
               <>
@@ -87,7 +112,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke={isActive ? "#53EA62" : "white"}
-                  className="w-6 h-6"
+                  className="min-w-6 min-h-6 h-7 w-7 md:h-6 md:w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -98,7 +123,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                 <button
                   className={`textbase uppercase text-white font-normal ${
                     isActive ? "bg-darkGreen" : "bg-gray"
-                  } rounded-[10px] w-[153px] h-[32px]`}
+                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
                 >
                   CHAMBERS
                 </button>
@@ -108,7 +133,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           <NavLink
             onClick={() => setSidebar(false)}
             to={"/sanctum"}
-            className="w-full flex   justify-center items-center gap-5"
+            className="w-full flex  justify-start md:justify-center items-center gap-5"
           >
             {({ isActive }) => (
               <>
@@ -118,7 +143,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke={isActive ? "#53EA62" : "white"}
-                  className="w-6 h-6"
+                  className="min-w-6 min-h-6 h-7 w-7 md:h-6 md:w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -129,7 +154,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                 <button
                   className={`textbase uppercase text-white font-normal ${
                     isActive ? "bg-darkGreen" : "bg-gray"
-                  } rounded-[10px] w-[153px] h-[32px]`}
+                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
                 >
                   SANCTUM
                 </button>
@@ -139,7 +164,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           <NavLink
             onClick={() => setSidebar(false)}
             to={"/treasury"}
-            className="w-full flex   justify-center items-center gap-5"
+            className="w-full flex  justify-start md:justify-center items-center gap-5"
           >
             {({ isActive }) => (
               <>
@@ -149,7 +174,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke={isActive ? "#53EA62" : "white"}
-                  className="w-6 h-6"
+                  className="min-w-6 min-h-6 h-7 w-7 md:h-6 md:w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -160,7 +185,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                 <button
                   className={`textbase uppercase text-white font-normal ${
                     isActive ? "bg-darkGreen" : "bg-gray"
-                  } rounded-[10px] w-[153px] h-[32px]`}
+                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
                 >
                   TREASURY
                 </button>
@@ -170,7 +195,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           <NavLink
             onClick={() => setSidebar(false)}
             to={"/ino"}
-            className="w-full flex   justify-center items-center gap-5"
+            className="w-full flex  justify-start md:justify-center items-center gap-5"
           >
             {({ isActive }) => (
               <>
@@ -180,7 +205,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke={isActive ? "#53EA62" : "white"}
-                  className="w-6 h-6"
+                  className="min-w-6 min-h-6 h-7 w-7 md:h-6 md:w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -191,7 +216,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                 <button
                   className={`textbase uppercase text-white font-normal ${
                     isActive ? "bg-darkGreen" : "bg-gray"
-                  } rounded-[10px] w-[153px] h-[32px]`}
+                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
                 >
                   INOs
                 </button>

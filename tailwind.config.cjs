@@ -5,12 +5,14 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      dropShadow: {
+        crypt: "drop-shadow(0px 4px 20px rgba(36, 255, 0, 0.2))",
+      },
       boxShadow: {
         progressShadow: "0px 4px 4px rgba(0, 244, 68, 0.18)",
       },
       backgroundImage: {
         borderGreen: `linear-gradient(180deg, #11D800 0%, rgba(0, 0, 0, 0.703125) 29.69%, rgba(17, 215, 0, 0) 64.06%, rgba(15, 166, 1, 0.51) 98.96%)`,
-
         shadow:
           "linear-gradient(360deg, rgba(0, 255, 133, 0.49) 18.48%, rgba(17, 124, 73, 0) 84.71%)",
         radialGreen:

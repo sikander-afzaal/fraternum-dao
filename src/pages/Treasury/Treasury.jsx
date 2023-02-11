@@ -210,12 +210,42 @@ const Treasury = () => {
             ACTIVITY:
           </h4>
           <div className="greenScroll max-h-[500px] pr-3 overflow-y-auto flex justify-start items-start flex-col gap-4 w-full">
-            <ActivityBox />
-            <ActivityBox />
-            <ActivityBox />
-            <ActivityBox />
-            <ActivityBox />
-            <ActivityBox />
+            <ActivityBox
+              title="DEPOSIT: ORDER OF THE EYE #433"
+              time="10 days ago"
+              place="treasury"
+              img="/user-img.png"
+            />
+            <ActivityBox
+              title="DEPOSIT: ORDER OF THE EYE #433"
+              time="10 days ago"
+              place="treasury"
+              img="/user-img.png"
+            />
+            <ActivityBox
+              title="DEPOSIT: ORDER OF THE EYE #433"
+              time="10 days ago"
+              place="treasury"
+              img="/user-img.png"
+            />
+            <ActivityBox
+              title="DEPOSIT: ORDER OF THE EYE #433"
+              time="10 days ago"
+              place="treasury"
+              img="/user-img.png"
+            />
+            <ActivityBox
+              title="DEPOSIT: ORDER OF THE EYE #433"
+              time="10 days ago"
+              place="treasury"
+              img="/user-img.png"
+            />
+            <ActivityBox
+              title="DEPOSIT: ORDER OF THE EYE #433"
+              time="10 days ago"
+              place="treasury"
+              img="/user-img.png"
+            />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-[0.6fr__0.4fr] mt-8 w-full gap-4">
             <div className="flex justify-start items-start gap-1 flex-col ">

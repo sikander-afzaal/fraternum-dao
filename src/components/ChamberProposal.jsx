@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ChamberProposal = () => {
   return (
     <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-8 border-dashed bg-[#150D0DCC] border border-[#00FF47]  rounded-[10px] px-5 py-4">
@@ -42,9 +44,12 @@ const ChamberProposal = () => {
         <button className="font-normal text-xl uppercase text-white my-2 bg-[#9FFFBA7A] w-full xl:w-[160px] h-[40px] rounded-[10px] border border-solid  border-[#9FFFBA87]">
           Processed
         </button>
-        <button className="font-bold text-[28px] text-white bg-[#7CBB82] w-full xl:w-[120px] h-[40px] rounded-[10px] border-none">
+        <Link
+          to="/chambers/details"
+          className="font-bold flex justify-center items-center text-[28px] text-white bg-[#7CBB82] w-full xl:w-[120px] h-[40px] rounded-[10px] border-none"
+        >
           OPEN
-        </button>
+        </Link>
       </div>
     </div>
   );
