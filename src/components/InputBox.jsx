@@ -1,6 +1,11 @@
-const InputBox = ({ label, name, placeholder, value, handler }) => {
+const InputBox = ({ label, name, placeholder, value, handler, purplebox }) => {
   return (
-    <div className="flex justify-start w-full items-start flex-col gap-3">
+    <div className="flex justify-start w-full items-start flex-col gap-3 relative">
+      {purplebox && (
+        <p className="absolute top-0 right-0 bg-black text-lightGreen text-sm border-lightGreen border border-solid rounded-[10px] px-3 py-1 flex justify-center items-center">
+          {purplebox}
+        </p>
+      )}
       <label
         htmlFor={label}
         className="text-white uppercase text-2xl font-alumni leading-[1]"

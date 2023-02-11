@@ -17,7 +17,7 @@ const RequestSharesModal = () => {
   return (
     <>
       <div className="overlay z-[91]"></div>
-      <div className="fixed top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 max-h-[90%] overflow-y-auto flex justify-start items-start flex-col w-[90%] max-w-[600px] gap-5 bg-gray p-5 z-[92] rounded-[10px]">
+      <div className="fixed greenScroll top-1/2 -translate-y-1/2 -translate-x-1/2 left-1/2 max-h-[90%] overflow-y-auto flex justify-start items-start flex-col w-[90%] max-w-[600px] gap-5 bg-gray p-5 z-[92] rounded-[10px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -61,7 +61,7 @@ const RequestSharesModal = () => {
           />
           <div className="flex w-full justify-start items-start flex-col gap-3">
             <label
-              htmlFor={"tribute"}
+              htmlFor={"link"}
               className="text-white uppercase text-2xl font-alumni leading-[1]"
             >
               * Link

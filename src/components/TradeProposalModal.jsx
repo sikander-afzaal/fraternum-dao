@@ -1,12 +1,13 @@
 import { useState } from "react";
 import InputBox from "./InputBox";
 
-const RequestTokenModal = () => {
+const TradeProposalModal = () => {
   const [formData, setFormData] = useState({
     title: "",
-    shares: "",
+    payment: "",
     tribute: "",
     desc: "",
+    link: "",
   });
   const inputHandler = (e) => {
     const { name, value } = e.target;
@@ -35,13 +36,13 @@ const RequestTokenModal = () => {
 
         <div className="flex justify-start items-center text-center sm:text-left sm:items-start flex-col gap-2">
           <h3 className="font-pirate uppercase text-white text-[22px] leading-[1] ">
-            Member Proposal
+            Trade Proposal
           </h3>
           <p className="text-mint font-alumni text-[30px] leading-[1]">
-            Request Shares For Tokens
+            Swap Tokens For Loot Or Shares
           </p>
           <p className="text-abel text-base sm:text-xl text-white">
-            Request shares from the DAO in exchange for ERC-20 tokens
+            Offer to trade your shares, loot, or tokens with the DAO
           </p>
         </div>
         <form className="flex justify-start items-start flex-col gap-5 w-full">
@@ -51,13 +52,6 @@ const RequestTokenModal = () => {
             placeholder="Proposal Title"
             label="Title"
             name="title"
-          />
-          <InputBox
-            handler={inputHandler}
-            value={formData.shares}
-            placeholder="0"
-            label="Shares Requested"
-            name="shares"
           />
           <div className="flex w-full justify-start items-start flex-col gap-3 relative">
             <p className="absolute top-0 right-0 bg-black text-lightGreen text-sm border-lightGreen border border-solid rounded-[10px] px-3 py-1 flex justify-center items-center">
@@ -100,6 +94,54 @@ const RequestTokenModal = () => {
               onChange={inputHandler}
             ></textarea>
           </div>
+
+          <div className="flex w-full justify-start items-start flex-col gap-3 relative">
+            <p className="absolute top-0 right-0 bg-black text-lightGreen text-sm border-lightGreen border border-solid rounded-[10px] px-3 py-1 flex justify-center items-center">
+              Max:1568.4174
+            </p>
+            <label
+              htmlFor={"payment"}
+              className="text-white uppercase text-2xl font-alumni leading-[1]"
+            >
+              Payment Requested
+            </label>
+            <div className="flex justify-start items-center rounded-[10px] overflow-hidden w-full border border-white border-solid h-[45px]">
+              <input
+                type="text"
+                placeholder="0"
+                value={formData.payment}
+                name={"payment"}
+                id="payment"
+                onChange={inputHandler}
+                className="w-full bg-transparent border-none outline-none h-full text-white pl-3 "
+              />
+              <select className="min-w-[100px] outline-none border-l border-l-white border-solid px-3 bg-darkGreen text-white h-full">
+                <option value="karma">KARMA</option>
+              </select>
+            </div>
+          </div>
+          <div className="flex w-full justify-start items-start flex-col gap-3">
+            <label
+              htmlFor={"link"}
+              className="text-white uppercase text-2xl font-alumni leading-[1]"
+            >
+              * Link
+            </label>
+            <div className="flex justify-start items-center rounded-[10px] overflow-hidden w-full border border-white border-solid h-[45px]">
+              <div className="min-w-[100px] outline-none border-r border-r-white border-solid flex justify-center items-center bg-darkGreen text-white h-full">
+                <p className="text-white text-lg leading-[1]">https://</p>
+              </div>
+              <input
+                type="text"
+                placeholder="daolink.club"
+                value={formData.link}
+                name={"link"}
+                id="link"
+                onChange={inputHandler}
+                className="w-full bg-transparent border-none outline-none h-full text-white pl-3 "
+              />
+            </div>
+          </div>
           <div className="flex sm:flex-row flex-col justify-between items-center gap-3 w-full">
             <button className="border-lightGreen text-lightGreen border border-solid bg-transparent hover:bg-lightGreen w-full sm:w-auto hover:text-white transition-all duration-300 text-xl h-[45px] px-5 rounded-[10px]">
               More +
@@ -119,4 +161,4 @@ const RequestTokenModal = () => {
   );
 };
 
-export default RequestTokenModal;
+export default TradeProposalModal;

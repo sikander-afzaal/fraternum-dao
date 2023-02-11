@@ -12,6 +12,9 @@ import Ino from "./pages/Ino/Ino";
 import RequestTokenModal from "./components/RequestTokenModal";
 import RequestSharesModal from "./components/RequestSharesModal";
 import WhitelistTokenModal from "./components/WhitelistTokenModal";
+import GuildKickModal from "./components/GuildKickModal";
+import MembershipProposal from "./components/MembershipProposal";
+import TradeProposalModal from "./components/TradeProposalModal";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -24,7 +27,10 @@ const App = () => {
     <div className="app min-h-screen grid w-full grid-cols-2  grid-rows-[auto__1fr__1fr] md:grid-cols-[280px__1fr__1fr]">
       {/* <RequestTokenModal /> */}
       {/* <RequestSharesModal /> */}
-      <WhitelistTokenModal />
+      {/* <WhitelistTokenModal /> */}
+      {/* <GuildKickModal /> */}
+      {/* <MembershipProposal /> */}
+      {/* <TradeProposalModal /> */}
       <div className="fixed top-0 -z-10 left-0 h-full w-full pointer-events-none bg-bodyBg bg-center"></div>
       <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
       <Topbar setSidebar={setSidebar} />
