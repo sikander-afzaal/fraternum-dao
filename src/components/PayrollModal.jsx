@@ -1,12 +1,12 @@
 import { useState } from "react";
 import InputBox from "./InputBox";
 
-const RequestTokenModal = () => {
+const PayrollModal = () => {
   const [formData, setFormData] = useState({
     title: "",
-    shares: "",
-    tribute: "",
-    desc: "",
+    minion: "",
+    payment: "",
+    recipient: "",
   });
   const inputHandler = (e) => {
     const { name, value } = e.target;
@@ -35,13 +35,13 @@ const RequestTokenModal = () => {
 
         <div className="flex justify-start items-center text-center sm:text-left sm:items-start flex-col gap-2 w-full">
           <h3 className="font-pirate uppercase text-white text-[22px] leading-[1] ">
-            Member Proposal
+            Payroll Proposal
           </h3>
           <p className="text-mint font-alumni text-[30px] leading-[1]">
-            Request Shares For Tokens
+            Payroll Proposal
           </p>
           <p className="text-abel text-base sm:text-xl text-white">
-            Request shares from the DAO in exchange for ERC-20 tokens
+            Pay members with a minion
           </p>
         </div>
         <form className="flex justify-start items-start flex-col gap-5 w-full">
@@ -52,54 +52,42 @@ const RequestTokenModal = () => {
             label="Title"
             name="title"
           />
+          <div className="flex justify-start w-full items-start flex-col gap-3 relative">
+            <label
+              htmlFor="select-min"
+              className="text-white uppercase text-2xl font-alumni leading-[1]"
+            >
+              * Select a minion
+            </label>
+            <select
+              id="select-min"
+              name={"minion"}
+              value={formData.minion}
+              className="w-full rounded-[10px] outline-none bg-transparent h-[45px] border border-white border-solid text-white pl-3 text-lg"
+              onChange={inputHandler}
+            >
+              <option value="Choose">Choose a DAO minion</option>
+              <option value="Choose">Choose a DAO minion</option>
+              <option value="Choose">Choose a DAO minion</option>
+              <option value="Choose">Choose a DAO minion</option>
+            </select>
+          </div>
           <InputBox
             handler={inputHandler}
-            value={formData.shares}
+            value={formData.payment}
             placeholder="0"
-            label="Shares Requested"
-            name="shares"
+            label="Minion Payment"
+            name="payment"
           />
-          <div className="flex w-full justify-start items-start flex-col gap-3 relative">
-            <p className="absolute top-0 right-0 bg-black text-lightGreen text-sm border-lightGreen border border-solid rounded-[10px] px-3 py-1 flex justify-center items-center">
-              Max:0.0000
-            </p>
-            <label
-              htmlFor={"tribute"}
-              className="text-white uppercase text-2xl font-alumni leading-[1]"
-            >
-              * Tribute Offered
-            </label>
-            <div className="flex justify-start items-center rounded-[10px] overflow-hidden w-full border border-white border-solid h-[45px]">
-              <input
-                type="text"
-                placeholder="0"
-                value={formData.tribute}
-                name={"tribute"}
-                id="tribute"
-                onChange={inputHandler}
-                className="w-full bg-transparent border-none outline-none h-full text-white pl-3 "
-              />
-              <select className="min-w-[100px] outline-none border-l border-l-white border-solid px-3 bg-darkGreen text-white h-full">
-                <option value="karma">KARMA</option>
-              </select>
-            </div>
-          </div>
-          <div className="flex justify-start w-full items-start flex-col gap-3">
-            <label
-              htmlFor={"desc"}
-              className="text-white uppercase text-2xl font-alumni leading-[1]"
-            >
-              Description
-            </label>
-            <textarea
-              id={"desc"}
-              name={"desc"}
-              value={formData.desc}
-              placeholder={"Your Description Here"}
-              className="w-full rounded-[10px] outline-none bg-transparent h-[145px] border border-white border-solid text-white pt-3 pl-3 text-lg resize-none"
-              onChange={inputHandler}
-            ></textarea>
-          </div>
+          <InputBox
+            purplebox="Members"
+            handler={inputHandler}
+            value={formData.recipient}
+            placeholder="0x"
+            label="recipient"
+            name="recipient"
+          />
+
           <div className="flex sm:flex-row flex-col justify-between items-center gap-3 w-full">
             <button className="border-lightGreen text-lightGreen border border-solid bg-transparent hover:bg-lightGreen w-full sm:w-auto hover:text-white transition-all duration-300 text-xl h-[45px] px-5 rounded-[10px]">
               More +
@@ -119,4 +107,4 @@ const RequestTokenModal = () => {
   );
 };
 
-export default RequestTokenModal;
+export default PayrollModal;

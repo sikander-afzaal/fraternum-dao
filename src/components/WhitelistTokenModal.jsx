@@ -33,7 +33,7 @@ const WhitelistTokenModal = () => {
           />
         </svg>
 
-        <div className="flex justify-start items-center text-center sm:text-left sm:items-start flex-col gap-2">
+        <div className="flex justify-start items-center text-center sm:text-left sm:items-start flex-col gap-2 w-full">
           <h3 className="font-pirate uppercase text-white text-[22px] leading-[1] ">
             Whitelist token Proposal
           </h3>

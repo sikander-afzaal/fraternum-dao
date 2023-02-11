@@ -15,6 +15,8 @@ import WhitelistTokenModal from "./components/WhitelistTokenModal";
 import GuildKickModal from "./components/GuildKickModal";
 import MembershipProposal from "./components/MembershipProposal";
 import TradeProposalModal from "./components/TradeProposalModal";
+import PayrollModal from "./components/PayrollModal";
+import BuyoutModal from "./components/BuyoutModal";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -30,7 +32,9 @@ const App = () => {
       {/* <WhitelistTokenModal /> */}
       {/* <GuildKickModal /> */}
       {/* <MembershipProposal /> */}
-      {/* <TradeProposalModal /> */}
+      <TradeProposalModal />
+      {/* <PayrollModal /> */}
+      {/* <BuyoutModal /> */}
       <div className="fixed top-0 -z-10 left-0 h-full w-full pointer-events-none bg-bodyBg bg-center"></div>
       <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
       <Topbar setSidebar={setSidebar} />

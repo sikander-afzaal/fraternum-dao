@@ -1,12 +1,13 @@
 import { useState } from "react";
 import InputBox from "./InputBox";
 
-const MembershipProposal = () => {
+const BuyoutModal = () => {
   const [formData, setFormData] = useState({
     title: "",
     shares: "",
-    tribute: "",
+    funds: "",
     desc: "",
+    minion: "",
     link: "",
   });
   const inputHandler = (e) => {
@@ -34,20 +35,40 @@ const MembershipProposal = () => {
           />
         </svg>
 
-        <div className="flex w-full justify-start items-center text-center sm:text-left sm:items-start flex-col gap-2">
+        <div className="flex justify-start items-center w-full text-center sm:text-left sm:items-start flex-col gap-2">
           <h3 className="font-pirate uppercase text-white text-[22px] leading-[1] ">
-            Member Proposal
+            Bank buyout Proposal
           </h3>
           <p className="text-mint font-alumni text-[30px] leading-[1]">
-            Membership Proposal
+            Buyout Proposal
           </p>
           <p className="text-abel text-base sm:text-xl text-white">
-            Proposal for DAO membership
+            Request funds as buyout
           </p>
         </div>
         <form className="flex justify-start items-start flex-col  gap-5 w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-y-5 md:gap-x-8">
             <div className="flex justify-start items-start flex-col w-full gap-5">
+              <div className="flex justify-start w-full items-start flex-col gap-3 relative">
+                <label
+                  htmlFor="select-min"
+                  className="text-white uppercase text-2xl font-alumni leading-[1]"
+                >
+                  * Select a minion
+                </label>
+                <select
+                  id="select-min"
+                  name={"minion"}
+                  value={formData.minion}
+                  className="w-full rounded-[10px] outline-none bg-transparent h-[45px] border border-white border-solid text-white pl-3 text-lg"
+                  onChange={inputHandler}
+                >
+                  <option value="Choose">Choose a DAO minion</option>
+                  <option value="Choose">Choose a DAO minion</option>
+                  <option value="Choose">Choose a DAO minion</option>
+                  <option value="Choose">Choose a DAO minion</option>
+                </select>
+              </div>
               <InputBox
                 handler={inputHandler}
                 value={formData.title}
@@ -95,30 +116,41 @@ const MembershipProposal = () => {
               </div>
             </div>
             <div className="flex justify-start items-start flex-col w-full gap-5">
-              <InputBox
-                handler={inputHandler}
-                value={formData.shares}
-                placeholder="0"
-                label="Shares Requested"
-                name="shares"
-              />
+              <div className="flex justify-start items-start flex-col gap-8 w-full p-4 rounded-[10px] border border-white border-solid">
+                <div className="flex justify-start items-start flex-col gap-2">
+                  <p className="text-white text-xl font-normal leading-[1]">
+                    Your Shares and Loot
+                  </p>
+                  <p className="text-white text-xl font-normal leading-[1]">
+                    0 (0% of total)
+                  </p>
+                </div>
+                <div className="flex justify-start items-start flex-col gap-2">
+                  <p className="text-white text-xl font-normal leading-[1]">
+                    Estimated Exit Value on Ragequit
+                  </p>
+                  <p className="text-white text-xl font-normal leading-[1]">
+                    $0
+                  </p>
+                </div>
+              </div>
               <div className="flex relative w-full justify-start items-start flex-col gap-3">
                 <p className="absolute top-0 right-0 bg-black text-lightGreen text-sm border-lightGreen border border-solid rounded-[10px] px-3 py-1 flex justify-center items-center">
-                  Max:0.0000
+                  Max:25000000000
                 </p>
                 <label
-                  htmlFor={"tribute"}
+                  htmlFor={"funds"}
                   className="text-white uppercase text-2xl font-alumni leading-[1]"
                 >
-                  * Tribute Offered
+                  * Request Funds
                 </label>
                 <div className="flex justify-start items-center rounded-[10px] overflow-hidden w-full border border-white border-solid h-[45px]">
                   <input
                     type="text"
                     placeholder="0"
-                    value={formData.tribute}
-                    name={"tribute"}
-                    id="tribute"
+                    value={formData.funds}
+                    name={"funds"}
+                    id="funds"
                     onChange={inputHandler}
                     className="w-full bg-transparent border-none outline-none h-full text-white pl-3 "
                   />
@@ -127,6 +159,10 @@ const MembershipProposal = () => {
                   </select>
                 </div>
               </div>
+              <p className="text-mint text-lg ">
+                If the proposal passes, the Funds will only be available after
+                you ragequit
+              </p>
             </div>
           </div>
 
@@ -149,4 +185,4 @@ const MembershipProposal = () => {
   );
 };
 
-export default MembershipProposal;
+export default BuyoutModal;
