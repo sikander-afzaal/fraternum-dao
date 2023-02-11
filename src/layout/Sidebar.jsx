@@ -4,10 +4,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
   return (
     <>
       {sidebar && (
-        <div
-          onClick={() => setSidebar(false)}
-          className="fixed top-0 left-0 bg-black opacity-80 z-[88] w-full h-full"
-        ></div>
+        <div onClick={() => setSidebar(false)} className="overlay z-[88]"></div>
       )}
       <div
         className={`sidebar flex px-6 justify-start items-center flex-col py-7  top-0 h-full md:h-auto md:max-h-screen overflow-y-auto  gap-10  transition-all md:max-w-none max-w-[350px] duration-1000 z-[90]  bg-sidebarBg w-full md:sticky fixed ${
