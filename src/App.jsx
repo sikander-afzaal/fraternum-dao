@@ -19,7 +19,7 @@ const App = () => {
   const [sidebar, setSidebar] = useState(false);
   return (
     <div className="app min-h-screen grid w-full grid-cols-2  grid-rows-[auto__1fr__1fr] md:grid-cols-[280px__1fr__1fr]">
-      <div className="fixed top-0 left-0 h-full w-full pointer-events-none bg-bodyBg bg-center"></div>
+      <div className="fixed top-0 -z-10 left-0 h-full w-full pointer-events-none bg-bodyBg bg-center"></div>
       <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
       <Topbar setSidebar={setSidebar} />
       <div className="main-grid w-full pb-5 flex justify-start flex-col items-center">
