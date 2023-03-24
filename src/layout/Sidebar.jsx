@@ -7,7 +7,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
         <div onClick={() => setSidebar(false)} className="overlay z-[88]"></div>
       )}
       <div
-        className={`sidebar flex px-6 justify-start items-center flex-col py-7  top-0 h-full md:h-auto md:max-h-screen overflow-y-auto  gap-10  transition-all md:max-w-none max-w-[350px] duration-1000 z-[90]  bg-sidebarBg w-full md:sticky fixed ${
+        className={`sidebar flex px-6 justify-start items-center flex-col py-7  top-0 h-full md:h-auto md:max-h-screen overflow-y-auto  gap-10  transition-all md:max-w-none max-w-[350px] duration-1000 z-[90]  border-r-[3px] border-solid border-darkGreen w-full  bg-black md:sticky fixed ${
           sidebar ? "left-0" : "-left-[900px]"
         }`}
       >
@@ -29,14 +29,22 @@ const Sidebar = ({ sidebar, setSidebar }) => {
 
         <div className="flex justify-start items-center flex-col gap-4">
           <Link onClick={() => setSidebar(false)} to={"/"}>
-            <img src="/logo.png" className="max-w-full object-contain" alt="" />
+            <img
+              src="/logo.png"
+              className="max-w-[150px] md:max-w-[200px] object-contain"
+              alt=""
+            />
           </Link>
         </div>
-        <div className="flex justify-start items-center flex-col w-full gap-5 md:gap-8">
+        <div className="flex justify-start items-center flex-col w-full gap-2">
           <NavLink
             onClick={() => setSidebar(false)}
             to={"/"}
-            className="w-full flex  justify-start md:justify-center items-center gap-5"
+            className={({ isActive }) =>
+              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+                isActive ? "bg-darkGreen" : "bg-transparent"
+              }`
+            }
           >
             {({ isActive }) => (
               <>
@@ -56,9 +64,10 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                 </svg>
 
                 <button
-                  className={`textbase uppercase text-white font-normal ${
-                    isActive ? "bg-darkGreen" : "bg-gray"
-                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
+                  className={`textbase ${
+                    isActive ? "text-[#53EA62]" : "text-white"
+                  }
+                   uppercase  font-normal  rounded-[10px] md:w-[153px]  h-[40px] md:h-[32px]`}
                 >
                   Home
                 </button>
@@ -68,7 +77,11 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           <NavLink
             onClick={() => setSidebar(false)}
             to={"/dashboard"}
-            className="w-full flex  justify-start md:justify-center items-center gap-5"
+            className={({ isActive }) =>
+              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+                isActive ? "bg-darkGreen" : "bg-transparent"
+              }`
+            }
           >
             {({ isActive }) => (
               <>
@@ -87,9 +100,10 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   />
                 </svg>{" "}
                 <button
-                  className={`textbase uppercase text-white font-normal ${
-                    isActive ? "bg-darkGreen" : "bg-gray"
-                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
+                  className={`textbase ${
+                    isActive ? "text-[#53EA62]" : "text-white"
+                  }
+                 uppercase  font-normal  rounded-[10px]  md:w-[153px] h-[40px] md:h-[32px]`}
                 >
                   DASHBOARD
                 </button>
@@ -99,7 +113,11 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           <NavLink
             onClick={() => setSidebar(false)}
             to={"/chambers"}
-            className="w-full flex  justify-start md:justify-center items-center gap-5"
+            className={({ isActive }) =>
+              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+                isActive ? "bg-darkGreen" : "bg-transparent"
+              }`
+            }
           >
             {({ isActive }) => (
               <>
@@ -118,9 +136,10 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   />
                 </svg>{" "}
                 <button
-                  className={`textbase uppercase text-white font-normal ${
-                    isActive ? "bg-darkGreen" : "bg-gray"
-                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
+                  className={`textbase ${
+                    isActive ? "text-[#53EA62]" : "text-white"
+                  }
+                   uppercase  font-normal  rounded-[10px]  md:w-[153px] h-[40px] md:h-[32px]`}
                 >
                   CHAMBERS
                 </button>
@@ -130,7 +149,11 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           <NavLink
             onClick={() => setSidebar(false)}
             to={"/sanctum"}
-            className="w-full flex  justify-start md:justify-center items-center gap-5"
+            className={({ isActive }) =>
+              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+                isActive ? "bg-darkGreen" : "bg-transparent"
+              }`
+            }
           >
             {({ isActive }) => (
               <>
@@ -149,9 +172,10 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   />
                 </svg>{" "}
                 <button
-                  className={`textbase uppercase text-white font-normal ${
-                    isActive ? "bg-darkGreen" : "bg-gray"
-                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
+                  className={`textbase ${
+                    isActive ? "text-[#53EA62]" : "text-white"
+                  }
+                 uppercase  font-normal  rounded-[10px] md:w-[153px] h-[40px] md:h-[32px]`}
                 >
                   SANCTUM
                 </button>
@@ -161,7 +185,11 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           <NavLink
             onClick={() => setSidebar(false)}
             to={"/treasury"}
-            className="w-full flex  justify-start md:justify-center items-center gap-5"
+            className={({ isActive }) =>
+              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+                isActive ? "bg-darkGreen" : "bg-transparent"
+              }`
+            }
           >
             {({ isActive }) => (
               <>
@@ -180,9 +208,10 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   />
                 </svg>{" "}
                 <button
-                  className={`textbase uppercase text-white font-normal ${
-                    isActive ? "bg-darkGreen" : "bg-gray"
-                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
+                  className={`textbase ${
+                    isActive ? "text-[#53EA62]" : "text-white"
+                  }
+                 uppercase  font-normal  rounded-[10px] md:w-[153px] h-[40px] md:h-[32px]`}
                 >
                   TREASURY
                 </button>
@@ -192,7 +221,11 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           <NavLink
             onClick={() => setSidebar(false)}
             to={"/ino"}
-            className="w-full flex  justify-start md:justify-center items-center gap-5"
+            className={({ isActive }) =>
+              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+                isActive ? "bg-darkGreen" : "bg-transparent"
+              }`
+            }
           >
             {({ isActive }) => (
               <>
@@ -211,9 +244,10 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   />
                 </svg>{" "}
                 <button
-                  className={`textbase uppercase text-white font-normal ${
-                    isActive ? "bg-darkGreen" : "bg-gray"
-                  } rounded-[10px] w-full md:w-[153px] h-[40px] md:h-[32px]`}
+                  className={`textbase ${
+                    isActive ? "text-[#53EA62]" : "text-white"
+                  }
+                 uppercase  font-normal  rounded-[10px]  md:w-[153px] h-[40px] md:h-[32px]`}
                 >
                   INOs
                 </button>
