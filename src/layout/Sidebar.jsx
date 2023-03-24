@@ -41,7 +41,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             onClick={() => setSidebar(false)}
             to={"/"}
             className={({ isActive }) =>
-              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+              `w-full flex py-2 px-3 rounded-lg  justify-start  items-center gap-7 md:gap-5 ${
                 isActive ? "bg-darkGreen" : "bg-transparent"
               }`
             }
@@ -67,7 +67,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   className={`textbase ${
                     isActive ? "text-[#53EA62]" : "text-white"
                   }
-                   uppercase  font-normal  rounded-[10px] md:w-[153px]  h-[40px] md:h-[32px]`}
+                   uppercase  font-normal  rounded-[10px]   h-[40px] md:h-[32px]`}
                 >
                   Home
                 </button>
@@ -78,7 +78,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             onClick={() => setSidebar(false)}
             to={"/dashboard"}
             className={({ isActive }) =>
-              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+              `w-full flex py-2 px-3 rounded-lg  justify-start  items-center gap-7 md:gap-5 ${
                 isActive ? "bg-darkGreen" : "bg-transparent"
               }`
             }
@@ -103,7 +103,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   className={`textbase ${
                     isActive ? "text-[#53EA62]" : "text-white"
                   }
-                 uppercase  font-normal  rounded-[10px]  md:w-[153px] h-[40px] md:h-[32px]`}
+                 uppercase  font-normal  rounded-[10px]   h-[40px] md:h-[32px]`}
                 >
                   DASHBOARD
                 </button>
@@ -114,7 +114,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             onClick={() => setSidebar(false)}
             to={"/chambers"}
             className={({ isActive }) =>
-              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+              `w-full flex py-2 px-3 rounded-lg  justify-start  items-center gap-7 md:gap-5 ${
                 isActive ? "bg-darkGreen" : "bg-transparent"
               }`
             }
@@ -139,7 +139,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   className={`textbase ${
                     isActive ? "text-[#53EA62]" : "text-white"
                   }
-                   uppercase  font-normal  rounded-[10px]  md:w-[153px] h-[40px] md:h-[32px]`}
+                   uppercase  font-normal  rounded-[10px]   h-[40px] md:h-[32px]`}
                 >
                   CHAMBERS
                 </button>
@@ -150,7 +150,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             onClick={() => setSidebar(false)}
             to={"/sanctum"}
             className={({ isActive }) =>
-              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+              `w-full flex py-2 px-3 rounded-lg  justify-start  items-center gap-7 md:gap-5 ${
                 isActive ? "bg-darkGreen" : "bg-transparent"
               }`
             }
@@ -175,7 +175,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   className={`textbase ${
                     isActive ? "text-[#53EA62]" : "text-white"
                   }
-                 uppercase  font-normal  rounded-[10px] md:w-[153px] h-[40px] md:h-[32px]`}
+                 uppercase  font-normal  rounded-[10px]  h-[40px] md:h-[32px]`}
                 >
                   SANCTUM
                 </button>
@@ -186,7 +186,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             onClick={() => setSidebar(false)}
             to={"/treasury"}
             className={({ isActive }) =>
-              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+              `w-full flex py-2 px-3 rounded-lg  justify-start  items-center gap-7 md:gap-5 ${
                 isActive ? "bg-darkGreen" : "bg-transparent"
               }`
             }
@@ -211,7 +211,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   className={`textbase ${
                     isActive ? "text-[#53EA62]" : "text-white"
                   }
-                 uppercase  font-normal  rounded-[10px] md:w-[153px] h-[40px] md:h-[32px]`}
+                 uppercase  font-normal  rounded-[10px]  h-[40px] md:h-[32px]`}
                 >
                   TREASURY
                 </button>
@@ -222,7 +222,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             onClick={() => setSidebar(false)}
             to={"/ino"}
             className={({ isActive }) =>
-              `w-full flex py-2 px-3 rounded-lg  justify-start md:justify-center items-center gap-7 md:gap-5 ${
+              `w-full flex py-2 px-3 rounded-lg  justify-start  items-center gap-7 md:gap-5 ${
                 isActive ? "bg-darkGreen" : "bg-transparent"
               }`
             }
@@ -247,7 +247,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
                   className={`textbase ${
                     isActive ? "text-[#53EA62]" : "text-white"
                   }
-                 uppercase  font-normal  rounded-[10px]  md:w-[153px] h-[40px] md:h-[32px]`}
+                 uppercase  font-normal  rounded-[10px]   h-[40px] md:h-[32px]`}
                 >
                   INOs
                 </button>
@@ -281,7 +281,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             />
             <img
               src="/twitter.png"
-              className="h-[37px] object-contain"
+              className="h-[371px] object-contain"
               alt=""
             />
             <img src="/yt.png" className="h-[30px] object-contain" alt="" />
