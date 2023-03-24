@@ -269,17 +269,29 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             $FTM <span className="text-white ml-2">$10.00</span>
           </a>
         </div>
-        <div className="flex bg-[#00000094] border-[3px] border-solid border-green justify-start items-center flex-col gap-4 w-full rounded-[10px] p-4">
+        <div className="flex   justify-start items-start md:items-center flex-col gap-4 w-full rounded-[10px] ">
           <h4 className="uppercase text-xl font-abel font-normal text-center text-white">
-            Join our <br /> community
+            Join our community
           </h4>
-          <div className="grid place-items-center grid-rows-2 grid-cols-3">
-            <img src="/discord.png" alt="" />
-            <img src="/twitter.png" alt="" />
-            <img src="/yt.png" alt="" />
-            <img src="/twitch.png" alt="" />
-            <img src="/telegram.png" alt="" />
-            <img src="/medium.png" alt="" />
+          <div className="grid place-items-center gap-6 grid-rows-2 grid-cols-3">
+            <img
+              src="/discord.png"
+              className="h-[30px] object-contain"
+              alt=""
+            />
+            <img
+              src="/twitter.png"
+              className="h-[37px] object-contain"
+              alt=""
+            />
+            <img src="/yt.png" className="h-[30px] object-contain" alt="" />
+            <img src="/twitch.png" className="h-[30px] object-contain" alt="" />
+            <img
+              src="/telegram.png"
+              className="h-[30px] object-contain"
+              alt=""
+            />
+            <img src="/medium.png" className="h-[30px] object-contain" alt="" />
           </div>
         </div>
       </div>
