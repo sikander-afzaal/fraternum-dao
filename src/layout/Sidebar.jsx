@@ -281,7 +281,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             />
             <img
               src="/twitter.png"
-              className="h-[371px] object-contain"
+              className="h-[37px] object-contain"
               alt=""
             />
             <img src="/yt.png" className="h-[30px] object-contain" alt="" />
